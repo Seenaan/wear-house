@@ -1,0 +1,19 @@
+[
+    {"lookbook":
+        {
+          "id": "1",
+          "title": "Summer Fashion",     
+          "items": "[\n        { name: 'Beach Wear', images: ['https://via.placeholder.com/100'] },\n        { name: 'Sunglasses', images: ['https://via.placeholder.com/100'] },\n      ]",
+          "likes": "5",
+          "rating": 4
+        }},
+        {
+          "id": "2",
+          "title": "Winter Collection",
+          "items": "[\n        { name: 'Cozy Sweaters', images: ['https://via.placeholder.com/100'] },\n        { name: 'Boots', images: ['https://via.placeholder.com/100'] },\n      ]",
+          "likes": "3",
+          "rating": 5
+        }
+    
+    ]
+    

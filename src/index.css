@@ -1,13 +1,465 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --primary-color: #7a005c;
+  --secondary-color: #ff6a95;
+  --background-color: #f4f4f4;
+  --text-color: white;
+  --modal-background: rgba(0, 0, 0, 0.8);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  overflow: auto; /* Allow scrolling */
+}
+
+.App {
+  text-align: center;
+  position: relative;
+  min-height: 100vh; /* Ensure App takes at least full height */
+}
+
+h1 {
+  color: var(--text-color);
+}
+
+header {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.header-links {
+  display: flex;
+  align-items:center; /* Center items vertically */
+  margin-left: auto; /* Add some left margin */
+}
+
+.header-link {
+  background-color: var(--secondary-color); /* Button color */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  padding: 10px 15px; /* Button padding */
+  margin-right: 20px; /* Space between buttons */
+  text-decoration: none; /* Remove underline from links */
+  transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.header-link:hover {
+  background-color: var(--primary-color); /* Darker color on hover */
+}
+.logo {
+  margin:auto;
+  padding: auto;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  position:fixed;
+  color: var(--secondary-color);
+
+}
+
+.header-link1 {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 30%;
+}
+
+.header-link2 {
+  margin-right: 40%;
+}
+
+.lookbook-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+
+.card {
+  background-color: #fff;
+  color: var(--text-color);
+  border-radius: 15px;
+  padding: 40px 50px;
+  margin: 20px 0;
+  position: relative;
+}
+
+.card.reverse {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+.card h2 {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.rating {
+  margin-top: 10px;
+}
+
+.rating span {
+  font-size: 20px;
+}
+
+.lookbook-card {
+  
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  padding: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.lookbook-card:hover {
+  transform: translateY(-5px);
+}
+
+.lookbook-card img {
+  max-width: 150%;
+  border-radius: 4px;
+}
+
+.lookbook-card p {
+  color:var(--text-color);
+}
+
+.link-buttons {
+  display: flex; /* Use flex to align buttons */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally (optional) */
+}
+
+.button-link {
+  background-color: var(--secondary-color); /* Button color */
+  color:var(--background-color); /* Text color */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  padding: 10px 15px; /* Button padding */
+  margin: 0 10px; /* Margin between buttons */
+  text-decoration: none; /* Remove underline from links */
+  transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.button-link:hover {
+  background-color: var(--primary-color); /* Darker color on hover */
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--modal-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure modal is above other content */
+}
+
+.modal-content {
+  position: relative;
+}
+
+.enlarged-image {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+p {
+  color: var(--background-color);
+}
+
+button {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin: 5px 0;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--primary-color);
+}
+
+button:focus {
+  outline: none;
+}
+
+.search-results,
+.lookbook-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+
+.item-card {
+  background: transparent;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 150px;
+  margin: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.item-card img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+/* Video Background */
+.videoBackground {
+  position: fixed; /* Fixes the video in place */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Prevents any overflow */
+  z-index: -1; /* Places the video behind other content */
+}
+
+.videoBackground video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire background */
+}
+
+/* Image Viewer */
+.image-viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--modal-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.image-viewer img {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+/* Additional Styles for Forms and Buttons */
+.input-group {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+input {
+  flex-grow: 2;
+  border: none;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.btn {
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #202142;
+}
+
+.btn-secondary {
+  background: var(--secondary-color);
+}
+
+.btn:hover {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+
+.btn:disabled {
+  background-color: #cccccc;
+  color: #333;
+  cursor: auto;
+}
+
+.btn:disabled:hover {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.message {
+  padding-top: 10px;
+  text-align: center;
+  color: rebeccapurple;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .rating li {
+    margin: 10px 3px;
+  }
+
+  .rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px 0 40px;
+  }
+
+  .input-group input {
+    width: 80%;
+  }
+}
+/* Add this to your existing CSS file */
+.fixed-nav {
+  position: fixed; /* Fixes the nav to the top of the viewport */
+  top: 30; /* Aligns it to the top */
+  left: 0; /* Aligns it to the left */
+  right: 20; /* Extends it to the right */
+  background-color: rgba(122, 0, 92, 0.8); /* Background color with transparency */
+  padding: 10px; /* Some padding for aesthetics */
+  z-index: 1000; /* Ensures it stays above other content */
+  display: flex; /* Use flex to layout the buttons */
+  justify-content: center; /* Center the buttons */
+  gap: 10px; /* Space between buttons */
+}
+
+/* Adjust the content margin to prevent overlap with the fixed nav */
+.content {
+  margin-top: 60px; /* Adjust based on the height of your fixed nav */
+}
+.image-viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Make sure it's above other content */
+}
+
+.image-viewer img {
+  max-width: 80%;
+  max-height: 80%;
+}
+.create-lookbook-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.title-input,
+.search-input {
+  padding: 12px;
+  font-size: 18px;
+  width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.search-button,
+.save-button {
+  padding: 12px 25px;
+  font-size: 18px;
+  background-color:var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-button:hover,
+.save-button:hover {
+  background-color: var(--primary-color);
+}
+
+.search-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.lookbook-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.item-card img {
+  max-width: 150px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.item-card button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  font-size: 16px;
+  background-color:var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }

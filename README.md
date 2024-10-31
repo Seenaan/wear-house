@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Wear-House
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Wear-House is your ultimate fashion lookbook application, allowing you to curate and manage your personal fashion collection. With Wear-House, you can explore various styles, add your favorite outfits, and share your looks with friends. The platform is designed to inspire and facilitate your fashion journey, whether you're a fashion enthusiast or simply looking to organize your wardrobe.
 
-## Available Scripts
+## Table of Contents
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Tech Stack](#tech-stack)
+- [Screenshots](#screenshots)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-In the project directory, you can run:
+## Features
+- **Create Lookbooks**: Easily curate your fashion collections by creating personalized lookbooks.
+- **Search for Images**: Search and add images using the Unsplash API, perfect for finding outfit inspirations.
+- **Interactive Gallery**: View, edit, and delete items from your lookbooks. Each lookbook item can be enlarged for a closer look.
+- **Likes and Ratings**: Interact with lookbooks by liking or rating them, so you can keep track of your favorite outfits.
+- **Persistence**: Lookbooks are saved using localStorage, ensuring they remain available even after refreshing the page.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Clone the Repository**:
+    ```bash
+    git clone https://github.com/Seenaan/Wear-House.git
+    cd Wear-House
+    ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. **Install Dependencies**:
+    ```bash
+    npm install
+    ```
 
-### `npm test`
+3. **Run the Application**:
+    ```bash
+    npm start
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. **Access the Application**:
+   Open your browser and go to `http://localhost:3000`.
 
-### `npm run build`
+## Usage
+1. **Create a Lookbook**:
+   - Enter a title for your lookbook.
+   - Search for images using keywords and add your favorite outfits to the lookbook.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **View and Manage Lookbooks**:
+   - Navigate to the gallery to view your created lookbooks.
+   - Edit, delete, or like the lookbooks as you please.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Navigation**:
+   - The app has a fixed navigation bar allowing easy access to creating and viewing lookbooks.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Tech Stack
+- **Frontend**: React, CSS
+- **API**: Unsplash API for image search and integration
+- **Storage**: localStorage for data persistence
 
-### `npm run eject`
+## Screenshots
+Add screenshots or gifs to demonstrate your app's UI and functionality here.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Contributing
+Contributions are welcome! To contribute:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Make your changes and commit (`git commit -m 'Add a new feature'`).
+4. Push to the branch (`git push origin feature/YourFeature`).
+5. Create a Pull Request.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## License
+This project is licensed under the MIT License.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Contact
+Feel free to reach out with any questions or feedback!
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- GitHub: [Seenaan](https://github.com/Seenaan)
+- LinkedIn: [Your LinkedIn Profile](#)  <!-- Update this link to your actual LinkedIn profile -->
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
