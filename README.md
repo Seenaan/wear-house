@@ -38,7 +38,7 @@ Wear-House is your ultimate fashion lookbook application, allowing you to curate
     ```
 
 4. **Access the Application**:
-   Open your browser and go to `http://localhost:3000`.
+   Open your browser and go to `http://localhost:3000`, or `https://6723de068243cc28e4fea58a--rad-squirrel-a0d456.netlify.app/`
 
 ## Usage
 1. **Create a Lookbook**:
@@ -58,7 +58,11 @@ Wear-House is your ultimate fashion lookbook application, allowing you to curate
 - **Storage**: localStorage for data persistence
 
 ## Screenshots
-Add screenshots or gifs to demonstrate your app's UI and functionality here.
+![Screenshot of the Application](../wear-house-app//src/assets/Screenshot%202024-10-31%20224809.png)
+![Screenshot of the Application](../wear-house-app//src/assets/Screenshot%202024-10-31%20224824.png)
+![Screenshot of the Application](../wear-house-app//src/assets/Screenshot%202024-10-31%20224833.png)
+
+
 
 ## Contributing
 Contributions are welcome! To contribute:
@@ -75,6 +79,6 @@ This project is licensed under the MIT License.
 Feel free to reach out with any questions or feedback!
 
 - GitHub: [Seenaan](https://github.com/Seenaan)
-- LinkedIn: [Your LinkedIn Profile](#)  <!-- Update this link to your actual LinkedIn profile -->
+- LinkedIn: [Your LinkedIn Profile](#)
 
 ---
